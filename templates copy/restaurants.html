@@ -1,0 +1,38 @@
+<div class="container">
+
+    <h1 class="mt-5">Showing Top Rated Restaurants</h1><!-- the best places to eat -->
+
+    <div class="card" ng-repeat="restaurants in getRestaurants.restaurants" style="margin-bottom: 15px;">
+
+        <div class="d-flex column">
+
+            <div class="card-body">
+
+                <h2 class="card-text">{{ restaurants.restaurant.name }}</h2><!-- some good old card text -->
+
+                <h5 class="card-text" style="color:gray;">{{ restaurants.restaurant.location.address }}</h5>
+
+                <div style"display: inline-block; font-size: 10px; margin-bottom: 10px;">Rating:</div><!-- the all important rating -->
+
+                <span class="badge badge-success" style="color: white; font-size: 10px; display: inline-block; margin-bottom: 10px;">{{ restaurants.restaurant.user_rating.rating_text }}{{ restaurants.restaurant.user_rating.arregate_rating }}/5</span>
+
+                <h6>Average Cost for 2: ${{ restaurants.restaurant.average_cost_for_two }}</h6>
+
+            </div><!-- end card-body -->
+
+            <div class="mt-5 mr-5">
+
+                    <button type="button" class="btn btn-danger">View Menu</button>
+
+                    <a href="http://maps.google.com/?q={{restaurants.restaurant.location.latitude}}, {{restaurants.restaurant.location.longitude}}"> <!-- section about how you get to the place -->
+
+                    <button type="button" class="btn btn-secondary">Get Directions</button> <!-- gathering up those directions -->
+
+                    </a>
+            </div>
+
+        </div><!-- end d-flex -->
+
+    </div><!-- end card -->
+
+</div><!-- end container -->

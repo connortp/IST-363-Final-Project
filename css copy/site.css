@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700,900|Merriweather:400,700");
+
+/*Red Color: #BE2020 */
+
+body {
+  background-color: #F2F2F2;
+  font: 16px/1.25 "Merriweather", serif;
+  padding: 0;
+  margin: 0;
+}
+
+.vh-100 {height:100vh;}
+
+#cuisineBtn{
+  border: none;
+  display: inline-block;
+  height: 60px;
+  width: 160px;
+}

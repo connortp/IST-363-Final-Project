@@ -1,0 +1,9 @@
+<div class="container">
+
+    <h1 class="cuisinehead">{{ getCuisines.cuisines.length }} Cuisines in {{ getCity.location_suggestions[0].name }}</h1>
+
+    <h5 class="cuisinehead-1">Select three cuisines you like</h5>
+
+    <button type="button" id="cuisineBtn" class="btn mt-4 mr-3" ng-repeat="cuisines in getCuisines.cuisines" ng-class="{'active': cuisine.cuisine.selected}" ng-click="toggle($index)">{{ cuisines.cuisine.cuisine_name }}</button>
+
+</div>
